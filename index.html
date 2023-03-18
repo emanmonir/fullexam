@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+<div class="side-nav ">
+        <div class="nav-left p-4">
+         <div class="left-links">
+             <ul class="list overflow-hidden mb-2">
+                 <li class="link-nav pt-4 ps-4 position-relative search_li" onclick="ser()"  >Search</li>
+                 <li class=" link-nav py-2 ps-4 position-relative cat_li" onclick="catli()" >Categories</li>
+                 <li class=" link-nav py-2 ps-4 position-relative area_li"onclick="areali()" >Area</li>
+                 <li class=" link-nav py-2 ps-4 position-relative int_li" onclick="intli()" >Ingredients</li>
+                 <li class=" link-nav py-2 ps-4 position-relative contact_li"onclick="con()" >Contact Us</li>
+             </ul>
+         </div>
+         <div class="nav-footer">
+             <div class="icons-footer">
+                 <i class=" icon fa-brands fa-facebook"></i>
+                 <i class=" icon fa-brands fa-twitter"></i>
+                 <i class=" icon fa-solid fa-globe"></i>
+             </div>
+             <div class="copy">
+                 <p class="copy-footer">Copyright Â© 2019 All Rights <br>Reserved.</p>
+             </div>
+     
+         </div>
+        </div>
+        <div class="nav-right py-4 px-2 text-black ">
+         <img class="logo" src="images/logo.png" alt="no-logo">
+         <i class="both close fa-solid fa-xmark d-none"></i>
+         <i class="both tog fa-solid fa-bars"></i>
+         <div>
+             <i class=" icon-right fa-solid fa-globe d-block"></i>
+             <i class=" icon-right fa-solid fa-share-nodes"></i>
+         </div>
+     </div>
+</div>       
+<div class="loading d-flex">
+    <i class="fa-solid fa-spinner text-white load"></i>
+</div>
+
+<!-- --------------- -->
+<!-- -------------search -->
+<div class="search-sec d-none">
+    <div class="container w-75" id="byname">
+        <!-- <div class="row py-4 ">
+            <div class="col-md-6 ">
+                <input class="form-control bg-transparent text-white" type="text" placeholder="Search By Name">
+            </div>
+            <div class="col-md-6">
+                <input class="form-control bg-transparent text-white" type="text" placeholder="Search By First Letter " maxlength="1">
+            </div> -->
+            
+        </div>
+    </div>
+<div class="start">
+    
+<div class="container">
+    <div class="row py-5 g-4"id="datamail">
+        <!-- <div class="col-md-3">
+            <div class="item rounded-2">
+                <img class="img1 w-100" src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="">
+                <div class="item-layer p-2">
+                    <h3 class="layer-h fs-3">Corba</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="item rounded-2">
+                <img class="img1 w-100" src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="">
+                <div class="item-layer p-2">
+                    <h3 class="layer-h fs-3">Corba</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="item rounded-2">
+                <img class="img1 w-100" src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="">
+                <div class="item-layer p-2">
+                    <h3 class="layer-h fs-3">Corba</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="item rounded-2">
+                <img class="img1 w-100" src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="">
+                <div class="item-layer p-2">
+                    <h3 class="layer-h fs-3">Corba</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="item rounded-2">
+                <img class="img1 w-100" src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="">
+                <div class="item-layer p-2">
+                    <h3 class="layer-h fs-3">Corba</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="item rounded-2">
+                <img class="img1 w-100" src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="">
+                <div class="item-layer p-2">
+                    <h3 class="layer-h fs-3">Corba</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="item rounded-2">
+                <img class="img1 w-100" src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="">
+                <div class="item-layer p-2">
+                    <h3 class="layer-h fs-3">Corba</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="item rounded-2">
+                <img class="img1 w-100" src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="">
+                <div class="item-layer p-2">
+                    <h3 class="layer-h fs-3">Corba</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="item rounded-2">
+                <img class="img1 w-100" src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="">
+                <div class="item-layer p-2">
+                    <h3 class="layer-h fs-3">Corba</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="item rounded-2">
+                <img class="img1 w-100" src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="">
+                <div class="item-layer p-2">
+                    <h3 class="layer-h fs-3">Corba</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="item rounded-2">
+                <img class="img1 w-100" src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="">
+                <div class="item-layer p-2">
+                    <h3 class="layer-h fs-3">Corba</h3>
+                </div>
+            </div>
+
+        </div> -->
+
+    </div>
+</div>
+</div>
+
+
+ <!-- </div> -->
+ <!-- category -->
+ <div class="category position-relative d-none">
+    <!-- loading -->
+    <div class="container">
+        <div class="row py-5 g-4" id="cat-dis">
+            <!-- <div class="col-md-3">
+                <div class="item rounded-2">
+                    <img class=" img1 w-100" src="https://www.themealdb.com/images/category/beef.png" alt="">
+                    <div class="item-layer2 p-2 text-center">
+                        <h3 class="layer-h fs-3">Corba</h3>
+                        <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1]</p>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col-md-3">
+                <div class="item rounded-2">
+                    <img class=" img1 w-100" src="https://www.themealdb.com/images/category/beef.png" alt="">
+                    <div class="item-layer2 p-2 text-center">
+                        <h3 class="layer-h fs-3">Corba</h3>
+                        <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1]</p>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col-md-3">
+                <div class="item rounded-2">
+                    <img class=" img1 w-100" src="https://www.themealdb.com/images/category/beef.png" alt="">
+                    <div class="item-layer2 p-2 text-center">
+                        <h3 class="layer-h fs-3">Corba</h3>
+                        <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1]</p>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col-md-3">
+                <div class="item rounded-2">
+                    <img class=" img1 w-100" src="https://www.themealdb.com/images/category/beef.png" alt="">
+                    <div class="item-layer2 p-2 text-center">
+                        <h3 class="layer-h fs-3">Corba</h3>
+                        <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1]</p>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col-md-3">
+                <div class="item rounded-2">
+                    <img class=" img1 w-100" src="https://www.themealdb.com/images/category/beef.png" alt="">
+                    <div class="item-layer2 p-2 text-center">
+                        <h3 class="layer-h fs-3">Corba</h3>
+                        <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1]</p>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col-md-3">
+                <div class="item rounded-2">
+                    <img class=" img1 w-100" src="https://www.themealdb.com/images/category/beef.png" alt="">
+                    <div class="item-layer2 p-2 text-center">
+                        <h3 class="layer-h fs-3">Corba</h3>
+                        <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1]</p>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col-md-3">
+                <div class="item rounded-2">
+                    <img class=" img1 w-100" src="https://www.themealdb.com/images/category/beef.png" alt="">
+                    <div class="item-layer2 p-2 text-center">
+                        <h3 class="layer-h fs-3">Corba</h3>
+                        <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1]</p>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col-md-3">
+                <div class="item rounded-2">
+                    <img class=" img1 w-100" src="https://www.themealdb.com/images/category/beef.png" alt="">
+                    <div class="item-layer2 p-2 text-center">
+                        <h3 class="layer-h fs-3">Corba</h3>
+                        <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1]</p>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col-md-3">
+                <div class="item rounded-2">
+                    <img class=" img1 w-100" src="https://www.themealdb.com/images/category/beef.png" alt="">
+                    <div class="item-layer2 p-2 text-center">
+                        <h3 class="layer-h fs-3">Corba</h3>
+                        <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1]</p>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col-md-3">
+                <div class="item rounded-2">
+                    <img class=" img1 w-100" src="https://www.themealdb.com/images/category/beef.png" alt="">
+                    <div class="item-layer2 p-2 text-center">
+                        <h3 class="layer-h fs-3">Corba</h3>
+                        <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1]</p>
+                    </div>
+                </div>
+    
+            </div> -->
+        </div>
+    </div>
+
+ </div>
+ <!-- area -->
+ <div class="area position-relative d-none">
+    <!-- loading -->
+    <div class="container">
+        <div class="row py-5 g-4" id="area-dis">
+            <!-- <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="area-item rounded-2 text-white">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i>
+                    <h3>American</h3>
+            </div>
+            </div> -->
+        </div>
+    </div>
+ </div>
+ <!-- ------integrate -->
+ <div class="integrate position-relative d-none ">
+    <!-- <div class="loading3 d-flex">
+        <i class="fa-solid fa-spinner text-white load"></i>
+    </div> -->
+   <div class="container">
+    <div class="row py-5 g-4" id="int">
+        <!-- <div class="col-md-3">
+            <div class=" integrate-item rounded-2 text-white">
+                <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                <h3>Chicken</h3>
+                <p>The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+        </div>
+
+
+        </div>
+        <div class="col-md-3">
+            <div class=" integrate-item rounded-2 text-white">
+                <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                <h3>Chicken</h3>
+                <p>The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+        </div>
+        </div>
+        <div class="col-md-3">
+            <div class=" integrate-item rounded-2 text-white">
+                <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                <h3>Chicken</h3>
+                <p>The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+        </div>
+
+
+        </div>
+        <div class="col-md-3">
+            <div class=" integrate-item rounded-2 text-white">
+                <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                <h3>Chicken</h3>
+                <p>The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+        </div>
+
+
+        </div>
+        <div class="col-md-3">
+            <div class=" integrate-item rounded-2 text-white">
+                <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                <h3>Chicken</h3>
+                <p>The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+        </div>
+
+
+        </div>
+        <div class="col-md-3">
+            <div class=" integrate-item rounded-2 text-white">
+                <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                <h3>Chicken</h3>
+                <p>The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+        </div>
+
+
+        </div>
+        <div class="col-md-3">
+            <div class=" integrate-item rounded-2 text-white">
+                <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                <h3>Chicken</h3>
+                <p>The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+        </div>
+
+
+        </div>
+        <div class="col-md-3">
+            <div class=" integrate-item rounded-2 text-white">
+                <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                <h3>Chicken</h3>
+                <p>The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+        </div>
+
+
+        </div>
+        <div class="col-md-3">
+            <div class=" integrate-item rounded-2 text-white">
+                <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                <h3>Chicken</h3>
+                <p>The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+        </div>
+
+
+        </div>
+        <div class="col-md-3">
+            <div class=" integrate-item rounded-2 text-white">
+                <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                <h3>Chicken</h3>
+                <p>The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+        </div>
+        </div> -->
+
+    </div>
+   </div>
+ </div>
+ <!-- contact -->
+ <div class="contact-us position-relative d-none">
+    <div class="container">
+        <div class="row py-5 g-4" id="finalcon"></div>
+        <!-- <div class="contact">
+            <div class="container w-75 text-center">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Enter Your Name">
+                        <div id="nameAlert" class="p-3 rounded-2 w-100 mt-2 d-none"style="background-color: #f8d7da; color: #b02a37;">
+                            Special characters and numbers not allowed
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control " placeholder="Enter Your Email">
+                        <div id="emailAlert" class="p-3 rounded-2 w-100 mt-2 d-none"style="background-color: #f8d7da; color: #b02a37;">
+                            Email not valid *exemple@yyy.zzz
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control " placeholder="Enter Your Phone">
+                        <div id="phoneAlert" class="p-3 rounded-2 w-100 mt-2 d-none"style="background-color: #f8d7da; color: #b02a37;">
+                            Enter valid Phone Number
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="number" class="form-control " placeholder="Enter Your Age">
+                        <div id="ageAlert" class="p-3 rounded-2 w-100 mt-2 d-none " style="background-color: #f8d7da; color: #b02a37;">
+                            Enter valid age
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="password" class="form-control " placeholder="Enter Your Password">
+                        <div id="passwordAlert" class="p-3 rounded-2 w-100 mt-2 d-none" style="background-color: #f8d7da; color: #b02a37;">
+                            Enter valid password *Minimum eight characters, at least one letter and one number:*
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="password" class="form-control " placeholder="Repassword">
+                        <div id="repasswordAlert" class="p-3 rounded-2 w-100 mt-2 d-none" style="background-color: #f8d7da; color: #b02a37;">
+                            Enter valid repassword 
+                        </div>
+                    </div>
+                </div>
+                <button id="submitBtn" disabled="" class="btn btn-outline-danger px-2 mt-3">Submit</button>
+            </div>
+        
+         </div> -->
+        
+    </div>
+
+ </div>
+ <!-- --------------- -->
+ <div class="details position-relative d-none ">
+    <div class="loading2 d-flex">
+        <i class="fa-solid fa-spinner text-white load"></i>
+    </div>
+    <div class="container">
+        <div class="row py-5 g-4" id="detailsdata">
+            <!-- <div class="col-md-4">
+                <img class="w-100 rounded-3" src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="">
+                    <h2 class="text-white">Corba</h2>
+            </div>
+            <div class="col-md-8">
+                <h2 class="text-white">Instructions</h2>
+                <p class="text-white">Pick through your lentils for any foreign debris, rinse them 2 or 3 times, drain, and set aside.  Faika, mint, thyme, black pepper, and red pepper as quickly as you can and st15-20 minutes or until the lentils have fallen apart and the carrots are completely cooked.
+                 After the soup has cooked and the lentils are tender, blend the soup either in a blender or simply use a hand blender to reach the consistency you desire. Taste for seasoning and add more salt if necessary.
+                Serve with crushed-up crackers, torn up bread, or something else to add some extra thickness.soup has cooked and the lentils are tender, blend the soup either in a blender or simply use a hand blender to reach the consistency you desire. Taste for seasoning and add more salt if necessary.
+                Serve with crushed-up crackers, torn up bread, or something else to add some extra thickness.  You could also use a traditional thickener (like cornstarch or flour), but I prefer to add crackers for some texture and saltiness.  Makes great leftovers, stays good in the fridge for about a week.</p>
+                <h3 class="text-white"><span class="fw-bolder">Area : </span>Turkish</h3>
+                <h3 class="text-white"><span class="fw-bolder">Category : </span>Side</h3>
+                <h3 class="text-white">Recipes :</h3>
+                <ul class="list-detail d-flex g-3 flex-wrap">
+                    <li class="rounded-2 color-detail m-2 p-1">1 cup  Lentils</li>
+                    <li class="rounded-2 color-detail m-2 p-1">1 large Onion</li>
+                    <li class="rounded-2 color-detail m-2 p-1">1 large Carrots</li>
+                    <li class="rounded-2 color-detail m-2 p-1">1 tbs Tomato Puree</li>
+                    <li class="rounded-2 color-detail m-2 p-1">2 tsp Cumin</li>
+                    <li class="rounded-2 color-detail m-2 p-1">1 tsp  Paprika</li>
+                    <li class="rounded-2 color-detail m-2 p-1">1/2 tsp Mint</li>
+                    <li class="rounded-2 color-detail m-2 p-1">1/2 tsp Thyme</li>
+                    <li class="rounded-2 color-detail m-2 p-1">1/4 tsp Black Pepper</li>
+                    <li class="rounded-2 color-detail m-2 p-1">1/4 tsp Red Pepper Flakes</li>
+                    <li class="rounded-2 color-detail m-2 p-1">4 cups  Vegetable Stock</li>
+                    <li class="rounded-2 color-detail m-2 p-1">1 cup  Water</li>
+                    <li class="rounded-2 color-detail m-2 p-1">Pinch Sea Salt</li>
+                </ul>
+
+                <h3 class="text-white">Tags :</h3>
+                <ul class="list-unstyled d-flex g-3 flex-wrap">
+                    
+                  <li class="rounded-2 text-danger m-2 p-1" style="background-color: #f8d7da;">Soup</li>
+                </ul>
+
+                <a target="_blank" href="https://findingtimeforcooking.com/main-dishes/red-lentil-soup-corba/" class="btn btn-success">Source</a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=VVnZd8A84z4" class="btn btn-danger">Youtube</a>
+            </div> -->
+
+        </div>
+    </div>
+
+ </div>
+ 
+    <script src="js/jquery-3.6.3.js"></script>
+    <script  src="js/index.js"></script>
+
+</body>
+
+</html>
